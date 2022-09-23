@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<script>
+		function LOGIN(e) {
+			e.preventDefault();
+			var fname =
+				document.RegForm.fname.value;
+			var lname =
+				document.RegForm.lname.value;
+			var pass = document.RegForm.pass.value;
+			
+			if(fname==""||lname==""||pass==""){
+				alert("All fields are required")
+			}else
+			alert("Firstname: " + fname + "\nLastname: " + lname);
+		}
+	</script>
+	<link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+	<div id="logform">
+		<h1 style="text-align: center;margin-top:3%">REGISTRATION FORM</h1>
+		<form name="RegForm" onsubmit=" LOGIN()" method="post">
+			<p>FirstName:
+				<input rows="2" type="text"  name="fname" />
+			</p><br />
+
+			<p>LastName:
+				<input type="text"  name="lname"/>
+			</p><br />
+
+			<p>Password:
+				<input type="password"  name="pass"/>
+			</p><br />
+
+			<button type="submit" >SUBMIT</button>
+
+
+
+		</form>
+	</div>
+</body>
+
+</html>
